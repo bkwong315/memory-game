@@ -38,6 +38,10 @@ const config = {
         test: /\.svg$/,
         use: 'file-loader',
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
     ],
   },
   devtool: argv.mode === 'development' ? 'inline-source-map' : 'source-map',
