@@ -5,15 +5,21 @@ import CardInfo from '../../interfaces/CardInfo';
 
 interface GameProps {
   choices: CardInfo[];
+  handleCardClick: (idx: number) => void;
 }
 
 const Game = (props: GameProps) => {
-  const { choices } = props;
+  const { choices, handleCardClick } = props;
 
   return (
     <main>
       {choices.map((choice, idx) => (
-        <Card cardInfo={choice} key={idx} />
+        <Card
+          cardInfo={choice}
+          key={idx}
+          idx={idx}
+          onClickHandler={handleCardClick}
+        />
       ))}
     </main>
   );

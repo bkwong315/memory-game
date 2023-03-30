@@ -49,10 +49,22 @@ const App = () => {
     },
   ]);
 
+  const handleCardClick = (idx: number) => {
+    if (choices[idx].selected) {
+      console.log('Selected choice already');
+    } else {
+      setChoices((prevState) => {
+        let mutatedArr = [...prevState];
+        mutatedArr[idx].selected = true;
+        return mutatedArr;
+      });
+    }
+  };
+
   return (
     <>
       <h1 className='text-4xl text-white bg-black'>Memory Game</h1>
-      <Game choices={choices} />
+      <Game choices={choices} handleCardClick={handleCardClick} />
     </>
   );
 };
