@@ -48,23 +48,29 @@ const App = () => {
       selected: false,
     },
   ]);
+  const [currentScore, setCurrentScore] = useState(0);
   let shuffledChoices: CardInfo[] = shuffle(choices);
 
   const handleCardClick = (idx: number) => {
     if (choices[idx].selected) {
       console.log('Selected choice already');
+      setCurrentScore(0);
     } else {
       setChoices((prevState) => {
         let mutatedArr = [...prevState];
         mutatedArr[idx].selected = true;
         return mutatedArr;
       });
+      setCurrentScore((prevState) => prevState + 1);
     }
   };
 
   return (
     <>
       <h1 className='text-4xl text-white bg-black'>Memory Game</h1>
+      <div className='score-container'>
+        <div className='current-score'>{currentScore}</div>
+      </div>
       <Game choices={shuffledChoices} handleCardClick={handleCardClick} />
     </>
   );
