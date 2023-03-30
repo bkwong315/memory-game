@@ -19,3 +19,5 @@ function shuffle<G>(array: Array<G>): Array<G> {
 
   return array;
 }
+
+export default shuffle;
