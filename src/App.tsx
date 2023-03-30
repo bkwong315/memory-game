@@ -1,8 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import Game from './components/Game/Game';
 import CardInfo from './interfaces/CardInfo';
+import shuffle from './utility/shuffle';
 import './style.css';
 
 const App = () => {
@@ -48,6 +48,7 @@ const App = () => {
       selected: false,
     },
   ]);
+  let shuffledChoices: CardInfo[] = shuffle(choices);
 
   const handleCardClick = (idx: number) => {
     if (choices[idx].selected) {
@@ -64,7 +65,7 @@ const App = () => {
   return (
     <>
       <h1 className='text-4xl text-white bg-black'>Memory Game</h1>
-      <Game choices={choices} handleCardClick={handleCardClick} />
+      <Game choices={shuffledChoices} handleCardClick={handleCardClick} />
     </>
   );
 };
