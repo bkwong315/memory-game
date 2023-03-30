@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Game from './components/Game/Game';
 import CardInfo from './interfaces/CardInfo';
 import shuffle from './utility/shuffle';
+import Header from './components/Header/Header';
 import './style.css';
 
 const App = () => {
@@ -71,11 +72,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className='text-4xl text-white bg-black'>Memory Game</h1>
-      <div className='score-container'>
-        <div className='current-score'>Current Score: {currentScore}</div>
-        <div className='high-score'>High Score: {highScore}</div>
-      </div>
+      <Header currentScore={currentScore} highScore={highScore} />
       <Game choices={shuffledChoices} handleCardClick={handleCardClick} />
     </>
   );
