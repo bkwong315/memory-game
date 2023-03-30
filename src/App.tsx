@@ -6,7 +6,7 @@ import shuffle from './utility/shuffle';
 import './style.css';
 
 const App = () => {
-  const [choices, setChoices] = useState<CardInfo[]>([
+  const defaultState = [
     {
       imgUrl: 'bg-orange-50',
       selected: false,
@@ -47,13 +47,15 @@ const App = () => {
       imgUrl: 'bg-orange-900',
       selected: false,
     },
-  ]);
+  ];
+  const [choices, setChoices] = useState<CardInfo[]>(defaultState);
   const [currentScore, setCurrentScore] = useState(0);
   let shuffledChoices: CardInfo[] = shuffle(choices);
 
   const handleCardClick = (idx: number) => {
     if (choices[idx].selected) {
       console.log('Selected choice already');
+      setChoices(defaultState);
       setCurrentScore(0);
     } else {
       setChoices((prevState) => {
