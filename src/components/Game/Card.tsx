@@ -12,8 +12,8 @@ const Card = (props: CardProps) => {
   const { idx, onClickHandler } = props;
 
   return (
-    <div className={imgUrl + ' '} onClick={onClickHandler.bind(null, idx)}>
-      {selected.toString()}
+    <div onClick={onClickHandler.bind(null, idx)}>
+      <img src={imgUrl} alt={imgUrl} />
     </div>
   );
 };

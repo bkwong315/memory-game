@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 
+import abraImg from './assets/imgs/abra.png';
+import bulbasaurImg from './assets/imgs/bulbasaur.png';
+import charmanderImg from './assets/imgs/charmander.png';
+import diglettImg from './assets/imgs/diglett.png';
+import eeveeImg from './assets/imgs/eevee.png';
+import meowthImg from './assets/imgs/meowth.png';
+import mewImg from './assets/imgs/mew.png';
+import oddishImg from './assets/imgs/oddish.png';
+import pikachuImg from './assets/imgs/pikachu.png';
+import squirtleImg from './assets/imgs/squirtle.png';
+
 import Game from './components/Game/Game';
 import CardInfo from './interfaces/CardInfo';
 import shuffle from './utility/shuffle';
@@ -9,43 +20,43 @@ import './style.css';
 const App = () => {
   const defaultState = [
     {
-      imgUrl: 'bg-orange-50',
+      imgUrl: abraImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-100',
+      imgUrl: bulbasaurImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-200',
+      imgUrl: charmanderImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-300',
+      imgUrl: diglettImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-400',
+      imgUrl: eeveeImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-500',
+      imgUrl: meowthImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-600',
+      imgUrl: mewImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-700',
+      imgUrl: oddishImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-800',
+      imgUrl: pikachuImg,
       selected: false,
     },
     {
-      imgUrl: 'bg-orange-900',
+      imgUrl: squirtleImg,
       selected: false,
     },
   ];
