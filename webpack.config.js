@@ -24,18 +24,7 @@ const config = {
         exclude: /node_modules/,
       },
       {
-        test: /\.png$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.svg$/,
+        test: /\.(svg|png)$/,
         use: 'file-loader',
       },
       {
@@ -52,8 +41,9 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      favicon: './src/assets/imgs/favicon.png',
       templateContent: ({ htmlWebpackPlugin }) =>
-        '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Memory Game</title></head><body><div id="app"></div></body></html>',
+        '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Pokemon Memory Game</title></head><body><div id="app"></div></body></html>',
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin(),
