@@ -11,7 +11,7 @@ const Header = (props: HeaderProps) => {
   return (
     <header className='flex bg-gradient-to-t from-red-700 to-red-500 shadow-md justify-between items-center bg-[#f50303] text-white p-4 font-extrabold'>
       <h1 className='text-4xl'>Memory Game</h1>
-      <div className='score-container'>
+      <div className=''>
         <div className='current-score'>Current Score: {currentScore}</div>
         <div className='high-score'>High Score: {highScore}</div>
       </div>
