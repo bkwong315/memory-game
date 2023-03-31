@@ -8,7 +8,7 @@ interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-  const { imgUrl, selected } = props.cardInfo;
+  const { imgUrl } = props.cardInfo;
   const { idx, onClickHandler } = props;
 
   return (
