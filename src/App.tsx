@@ -68,7 +68,6 @@ const App = () => {
   const handleCardClick = (idx: number) => {
     if (choices[idx].selected) {
       if (currentScore > highScore) setHighScore(currentScore);
-      console.log('Selected choice already');
       setChoices(defaultState);
       setCurrentScore(0);
     } else {
