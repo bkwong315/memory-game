@@ -82,10 +82,10 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className='grid grid-rows-[auto_1fr] h-screen'>
       <Header currentScore={currentScore} highScore={highScore} />
       <Game choices={shuffledChoices} handleCardClick={handleCardClick} />
-    </>
+    </div>
   );
 };
 
