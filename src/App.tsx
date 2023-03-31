@@ -16,6 +16,7 @@ import CardInfo from './interfaces/CardInfo';
 import shuffle from './utility/shuffle';
 import Header from './components/Header/Header';
 import './style.css';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const defaultState = [
@@ -81,9 +82,10 @@ const App = () => {
   };
 
   return (
-    <div className='grid grid-rows-[auto_1fr] h-screen'>
+    <div className='grid grid-rows-[auto_1fr_auto] h-screen'>
       <Header currentScore={currentScore} highScore={highScore} />
       <Game choices={shuffledChoices} handleCardClick={handleCardClick} />
+      <Footer />
     </div>
   );
 };
