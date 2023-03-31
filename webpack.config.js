@@ -24,18 +24,7 @@ const config = {
         exclude: /node_modules/,
       },
       {
-        test: /\.png$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.svg$/,
+        test: /\.(svg|png)$/,
         use: 'file-loader',
       },
       {
