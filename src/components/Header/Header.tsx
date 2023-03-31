@@ -9,7 +9,7 @@ const Header = (props: HeaderProps) => {
   const { currentScore, highScore } = props;
 
   return (
-    <header className='flex bg-gradient-to-t from-red-700 to-red-500 shadow-md justify-between items-center bg-[#f50303] text-white p-4 font-extrabold'>
+    <header className='flex bg-gradient-to-t from-red-700 to-red-500 shadow-md justify-between items-center text-white p-4 font-extrabold'>
       <h1 className='text-4xl shadow-inner shadow-slate-700 rounded p-4 py-2 bg-slate-800'>
         Pokemon Memory Game
       </h1>
